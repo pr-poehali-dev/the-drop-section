@@ -123,21 +123,19 @@ export default function Index() {
         >
           <Icon name="Heart" size={17} />
         </button>
-        <div className="card-overlay">
-          <p className="font-sans text-xs tracking-widest uppercase mb-2 opacity-40">{p.subtitle}</p>
-          <div className="flex items-center gap-2 mb-3">
-            <Stars rating={p.rating} />
-            <span className="font-sans text-xs opacity-30">({p.reviews})</span>
-          </div>
-          <button className="btn-arsenal w-full">[ Добавить в арсенал ]</button>
-        </div>
       </div>
-      <div className="p-4" style={{ borderTop: `1px solid ${S.border}`, background: S.stone }}>
-        <h3 className="font-gothic text-sm" style={{ color: S.white }}>{p.name}</h3>
-        <div className="flex justify-between items-center mt-1.5">
+      <div className="p-4" style={{ background: S.stone }}>
+        <p className="font-sans text-xs tracking-widest uppercase mb-1 opacity-40">{p.subtitle}</p>
+        <h3 className="font-gothic text-sm mb-2" style={{ color: S.white }}>{p.name}</h3>
+        <div className="flex justify-between items-center mb-3">
           <span className="font-serif text-lg" style={{ color: S.silver }}>{p.price}</span>
           <span className="font-sans text-xs" style={{ color: S.silverDim }}>{p.material}</span>
         </div>
+        <div className="flex items-center gap-2 mb-3">
+          <Stars rating={p.rating} />
+          <span className="font-sans text-xs opacity-30">({p.reviews})</span>
+        </div>
+        <button className="btn-arsenal w-full">[ Добавить в арсенал ]</button>
       </div>
     </div>
     );
