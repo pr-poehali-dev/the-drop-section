@@ -226,16 +226,7 @@ export default function Index() {
             </div>
           </section>
 
-          {/* Ticker */}
-          <div className="overflow-hidden py-3 border-y" style={{ borderColor: "rgba(255,255,255,0.06)", background: "#0a0a0a" }}>
-            <div className="ticker-inner">
-              {Array(10).fill(null).map((_, i) => (
-                <span key={i} className="font-sans text-xs mr-10 tracking-widest" style={{ color: S.silverDim, opacity: 0.4 }}>
-                  ALAJE · ТУАРЕГСКИЙ КРЕСТ · МАСКА ПРЕДКОВ · MANI IRE GBOGBO · РУЧНАЯ РАБОТА ·&nbsp;
-                </span>
-              ))}
-            </div>
-          </div>
+
 
           {/* Split Screen — 3 Артефакта */}
           <section className="flex" style={{ minHeight: "100vh" }}>
