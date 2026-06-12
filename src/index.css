@@ -210,13 +210,23 @@
 .product-card img {
   transition:
     transform 0.6s ease,
-    filter 0.6s ease;
+    filter 0.6s ease,
+    opacity 0.5s ease;
   filter: brightness(0.82) saturate(0.85);
 }
 
-.product-card:hover img {
+.product-card:hover img.img-main {
   transform: scale(1.05);
   filter: brightness(0.55) saturate(0.7);
+}
+
+.product-card img.img-hover {
+  filter: brightness(0.88) saturate(0.9);
+}
+
+.product-card:hover img.img-hover {
+  transform: scale(1.03);
+  filter: brightness(0.7) saturate(0.8);
 }
 
 .product-card .card-overlay {

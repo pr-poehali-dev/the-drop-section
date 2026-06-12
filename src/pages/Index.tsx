@@ -110,11 +110,11 @@ export default function Index() {
     <div className="product-card" onClick={() => openProduct(p)}
       onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <div className="aspect-[3/4] relative overflow-hidden">
-        <img src={p.img} alt={p.name} className="w-full h-full object-cover absolute inset-0"
-          style={{ opacity: p.imgHover && hovered ? 0 : 1, transition: "opacity 0.5s ease" }} />
+        <img src={p.img} alt={p.name} className="img-main w-full h-full object-cover absolute inset-0"
+          style={{ opacity: p.imgHover && hovered ? 0 : 1 }} />
         {p.imgHover && (
-          <img src={p.imgHover} alt={p.name} className="w-full h-full object-cover absolute inset-0"
-            style={{ opacity: hovered ? 1 : 0, transition: "opacity 0.5s ease" }} />
+          <img src={p.imgHover} alt={p.name} className="img-hover w-full h-full object-cover absolute inset-0"
+            style={{ opacity: hovered ? 1 : 0 }} />
         )}
         <button
           className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center"
