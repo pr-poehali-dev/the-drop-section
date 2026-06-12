@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const LOGO = "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/5449559e-6a9e-450a-a9b5-d006c9cd1338.jpg";
 
 const IMAGES = {
-  pendant:   "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/6235f49d-ad1c-48df-96ff-aaa9c40875fb.jpg",
+  pendant:   "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/12546374-81f8-4f6e-a5be-f5371f862c66.jpg",
   medallion: "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/e6b62972-0661-42bf-b9e5-0e85b8079321.jpg",
   ring:      "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/a82e2240-b2d6-4858-bb1b-3c040db2d35b.jpg",
   clothing:  "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/3902b134-68d0-4932-b0b4-4a14e9926303.jpg",
