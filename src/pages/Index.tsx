@@ -218,7 +218,7 @@ export default function Index() {
             src="https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/5449559e-6a9e-450a-a9b5-d006c9cd1338.jpg"
             alt="ALAJE"
             className="h-10 w-auto select-none"
-            style={{ filter: "brightness(1.1) drop-shadow(0 0 8px rgba(201,151,58,0.3))", mixBlendMode: "lighten" }}
+            style={{ filter: "brightness(1.2) contrast(1.1) drop-shadow(0 0 6px rgba(201,151,58,0.4))", mixBlendMode: "screen" }}
             draggable={false}
           />
         </button>
@@ -271,7 +271,7 @@ export default function Index() {
                   src="https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/5449559e-6a9e-450a-a9b5-d006c9cd1338.jpg"
                   alt="ALAJE"
                   className="w-64 md:w-96 select-none"
-                  style={{ filter: "brightness(1.05) drop-shadow(0 0 60px rgba(201,151,58,0.2))", mixBlendMode: "lighten" }}
+                  style={{ filter: "brightness(1.1) contrast(1.05) drop-shadow(0 0 80px rgba(201,151,58,0.25))", mixBlendMode: "screen" }}
                   draggable={false}
                 />
               </div>
