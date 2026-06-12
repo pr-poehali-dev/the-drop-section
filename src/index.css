@@ -4,89 +4,43 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 4%;
+    --foreground: 40 20% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 6%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 20% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 60% 25%;
+    --accent-foreground: 40 20% 92%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 20% 92%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 15%;
+    --input: 0 0% 12%;
+    --ring: 43 74% 49%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gold: #c9973a;
+    --gold-light: #e8c06a;
+    --gold-dark: #8b6520;
+    --crimson: #6b1a1a;
+    --ink: #0a0a0a;
+    --stone: #1a1a1a;
+    --parchment: #ede4d0;
   }
 }
 
@@ -95,7 +49,294 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: "Montserrat", sans-serif;
+    background-color: #0a0a0a;
+    color: #ede4d0;
   }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-gothic {
+    font-family: "Cinzel Decorative", cursive;
+  }
+
+  .font-serif {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-sans {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
+
+/* Gold text */
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gold-light {
+  color: var(--gold-light);
+}
+
+/* Split screen hover effects */
+.split-col {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 1;
+  min-height: 100vh;
+  transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.split-col:hover {
+  flex: 1.4;
+}
+
+.split-col .split-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.8s ease;
+  filter: brightness(0.6) saturate(0.8);
+}
+
+.split-col:hover .split-img {
+  transform: scale(1.08);
+  filter: brightness(0.35) saturate(0.6);
+}
+
+.split-col .split-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem 2rem;
+  z-index: 2;
+}
+
+.split-col .split-overlay-info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease 0.1s,
+    transform 0.5s ease 0.1s;
+}
+
+.split-col:hover .split-overlay-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Grain overlay */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* Gold divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Arsenal button */
+.btn-arsenal {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-arsenal:hover {
+  background: var(--gold);
+  color: #0a0a0a;
+}
+
+/* Nav link */
+.nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ede4d0;
+  opacity: 0.7;
+  transition:
+    opacity 0.3s,
+    color 0.3s;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  opacity: 1;
+  color: var(--gold);
+}
+
+/* Product card hover */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+}
+
+.product-card img {
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+  filter: brightness(0.85);
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.6);
+}
+
+.product-card .card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  transform: translateY(60px);
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .card-overlay {
+  transform: translateY(0);
+}
+
+/* Animate in */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Star rating */
+.star {
+  color: var(--gold);
+}
+
+/* Size selector */
+.size-btn {
+  border: 1px solid #333;
+  background: transparent;
+  color: #ede4d0;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.size-btn:hover,
+.size-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Hero parallax text */
+.hero-subtitle {
+  letter-spacing: 0.4em;
+  font-size: 11px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* Scrolling ticker */
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.ticker-inner {
+  display: flex;
+  animation: ticker 20s linear infinite;
+  white-space: nowrap;
 }
