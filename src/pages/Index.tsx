@@ -229,20 +229,21 @@ export default function Index() {
           {/* Split Screen — 3 Артефакта */}
           <section className="flex" style={{ minHeight: "100vh" }}>
             {ARTIFACTS.map((art, i) => (
-              <div key={art.id} className="split-col" onClick={() => openProduct(art)}>
-                <img src={art.img} alt={art.name} className="split-img" />
-                {/* vertical silver line between cols */}
-                {i < 2 && (
-                  <div className="absolute top-0 right-0 bottom-0 z-10 w-px" style={{ background: "rgba(255,255,255,0.06)" }} />
-                )}
-                <div className="split-content">
-                  <p className="font-sans text-xs tracking-widest mb-2" style={{ color: S.silverDim, opacity: 0.4 }}>{String(i+1).padStart(2,"0")} / 03</p>
-                  <h2 className="font-gothic text-xl md:text-2xl leading-tight" style={{ color: S.white }}>{art.name}</h2>
-                  <p className="font-serif italic text-sm mt-1" style={{ color: S.silverDim }}>{art.subtitle}</p>
-                  <div className="split-overlay-info mt-5">
-                    <div style={{ height: "1px", background: "rgba(200,200,200,0.2)", marginBottom: "1rem" }} />
-                    <p className="font-serif text-2xl mb-4" style={{ color: S.silver }}>{art.price}</p>
-                    <button className="btn-arsenal text-xs">[ Добавить в арсенал ]</button>
+              <div key={art.id} className="split-col flex flex-col" onClick={() => openProduct(art)}>
+                <div className="relative flex-1 overflow-hidden">
+                  <img src={art.img} alt={art.name} className="split-img" />
+                  {i < 2 && (
+                    <div className="absolute top-0 right-0 bottom-0 z-10 w-px" style={{ background: "rgba(255,255,255,0.06)" }} />
+                  )}
+                </div>
+                <div className="px-5 py-4" style={{ background: S.stone, borderTop: `1px solid ${S.border}` }}>
+                  <p className="font-sans text-xs tracking-widest mb-1" style={{ color: S.silverDim, opacity: 0.4 }}>{String(i+1).padStart(2,"0")} / 03</p>
+                  <h2 className="font-gothic text-base md:text-lg leading-tight mb-1" style={{ color: S.white }}>{art.name}</h2>
+                  <p className="font-serif italic text-xs mb-2" style={{ color: S.silverDim }}>{art.subtitle}</p>
+                  <div style={{ height: "1px", background: "rgba(200,200,200,0.1)", marginBottom: "0.75rem" }} />
+                  <div className="flex items-center justify-between">
+                    <p className="font-serif text-xl" style={{ color: S.silver }}>{art.price}</p>
+                    <button className="btn-arsenal text-xs">[ В арсенал ]</button>
                   </div>
                 </div>
               </div>
