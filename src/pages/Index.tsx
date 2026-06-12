@@ -4,10 +4,11 @@ import Icon from "@/components/ui/icon";
 const LOGO = "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/5449559e-6a9e-450a-a9b5-d006c9cd1338.jpg";
 
 const IMAGES = {
-  pendant:   "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/12546374-81f8-4f6e-a5be-f5371f862c66.jpg",
-  medallion: "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/8220429e-0ea6-4eda-91c2-99192e824437.jpg",
-  ring:      "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/4865d085-a347-4efa-aadc-87af9a4243cb.jpg",
-  clothing:  "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/3902b134-68d0-4932-b0b4-4a14e9926303.jpg",
+  pendant:       "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/12546374-81f8-4f6e-a5be-f5371f862c66.jpg",
+  medallion:     "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/8220429e-0ea6-4eda-91c2-99192e824437.jpg",
+  ring:          "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/4865d085-a347-4efa-aadc-87af9a4243cb.jpg",
+  ringHover:     "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/3059afb6-ada0-449c-ae90-5816a31be406.jpg",
+  clothing:      "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/3902b134-68d0-4932-b0b4-4a14e9926303.jpg",
 };
 
 const S = {
@@ -23,7 +24,7 @@ const S = {
 const ARTIFACTS = [
   { id: 1, name: "Туарегский Крест",  subtitle: "Кулон",             price: "8 900 ₽",  priceNum: 8900,  desc: "Серебро 925°, ручная чеканка. Символ защиты кочевников Сахары.", img: IMAGES.pendant,   rating: 4.8, reviews: 24, sizes: ["XS","S","M"],              material: "Серебро 925°" },
   { id: 2, name: "Защитный Медальон", subtitle: "Медальон-брелок",   price: "5 400 ₽",  priceNum: 5400,  desc: "Бронза, патинирование. Хранитель памяти и рода.",              img: IMAGES.medallion, rating: 4.9, reviews: 37, sizes: ["Один размер"],            material: "Бронза" },
-  { id: 3, name: "Браслет",            subtitle: "Браслет",           price: "6 200 ₽",  priceNum: 6200,  desc: "Матовая сталь с гравировкой. «Всё хорошее — мне» — йоруба.", img: IMAGES.ring,      rating: 5.0, reviews: 18, sizes: ["XS","S","M","L"],          material: "Матовая сталь" },
+  { id: 3, name: "Браслет",            subtitle: "Браслет",           price: "6 200 ₽",  priceNum: 6200,  desc: "Матовая сталь с гравировкой. «Всё хорошее — мне» — йоруба.", img: IMAGES.ring,      imgHover: IMAGES.ringHover, rating: 5.0, reviews: 18, sizes: ["XS","S","M","L"],          material: "Матовая сталь" },
 ];
 
 const CLOTHING = [
@@ -103,10 +104,18 @@ export default function Index() {
     setSelectedProduct(null);
   };
 
-  const ProductCard = ({ p }: { p: Product }) => (
-    <div className="product-card" onClick={() => openProduct(p)}>
+  const ProductCard = ({ p }: { p: Product }) => {
+    const [hovered, setHovered] = useState(false);
+    return (
+    <div className="product-card" onClick={() => openProduct(p)}
+      onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <div className="aspect-[3/4] relative overflow-hidden">
-        <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+        <img src={p.img} alt={p.name} className="w-full h-full object-cover absolute inset-0"
+          style={{ opacity: p.imgHover && hovered ? 0 : 1, transition: "opacity 0.5s ease" }} />
+        {p.imgHover && (
+          <img src={p.imgHover} alt={p.name} className="w-full h-full object-cover absolute inset-0"
+            style={{ opacity: hovered ? 1 : 0, transition: "opacity 0.5s ease" }} />
+        )}
         <button
           className="absolute top-3 right-3 z-10 w-8 h-8 flex items-center justify-center"
           style={{ color: wishlist.includes(p.id) ? S.white : S.silverDim }}
@@ -131,7 +140,8 @@ export default function Index() {
         </div>
       </div>
     </div>
-  );
+    );
+  };
 
   const NAV_ITEMS: { key: Section; label: string }[] = [
     { key: "home",     label: "Главная"   },
