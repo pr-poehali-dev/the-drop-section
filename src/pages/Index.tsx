@@ -6,7 +6,7 @@ const LOGO = "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379
 const IMAGES = {
   pendant:   "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/12546374-81f8-4f6e-a5be-f5371f862c66.jpg",
   medallion: "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/8220429e-0ea6-4eda-91c2-99192e824437.jpg",
-  ring:      "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/a82e2240-b2d6-4858-bb1b-3c040db2d35b.jpg",
+  ring:      "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/4865d085-a347-4efa-aadc-87af9a4243cb.jpg",
   clothing:  "https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/files/3902b134-68d0-4932-b0b4-4a14e9926303.jpg",
 };
 
@@ -23,7 +23,7 @@ const S = {
 const ARTIFACTS = [
   { id: 1, name: "Туарегский Крест",  subtitle: "Кулон",             price: "8 900 ₽",  priceNum: 8900,  desc: "Серебро 925°, ручная чеканка. Символ защиты кочевников Сахары.", img: IMAGES.pendant,   rating: 4.8, reviews: 24, sizes: ["XS","S","M"],              material: "Серебро 925°" },
   { id: 2, name: "Защитный Медальон", subtitle: "Медальон-брелок",   price: "5 400 ₽",  priceNum: 5400,  desc: "Бронза, патинирование. Хранитель памяти и рода.",              img: IMAGES.medallion, rating: 4.9, reviews: 37, sizes: ["Один размер"],            material: "Бронза" },
-  { id: 3, name: "Mani ire gbogbo",   subtitle: "Разомкнутое кольцо",price: "6 200 ₽",  priceNum: 6200,  desc: "Вороненая сталь. «Всё хорошее — мне» — йоруба.",              img: IMAGES.ring,      rating: 5.0, reviews: 18, sizes: ["16","17","18","19","20"],  material: "Вороненая сталь" },
+  { id: 3, name: "Mani ire gbogbo",   subtitle: "Браслет",           price: "6 200 ₽",  priceNum: 6200,  desc: "Матовая сталь с гравировкой. «Всё хорошее — мне» — йоруба.", img: IMAGES.ring,      rating: 5.0, reviews: 18, sizes: ["XS","S","M","L"],          material: "Матовая сталь" },
 ];
 
 const CLOTHING = [
