@@ -213,8 +213,14 @@ export default function Index() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-5"
         style={{ background: "linear-gradient(to bottom, rgba(10,10,10,0.97), transparent)" }}>
-        <button onClick={() => navTo("home")} className="font-gothic text-xl tracking-wider" style={{ color: "var(--gold)" }}>
-          ALAJE
+        <button onClick={() => navTo("home")} className="flex items-center">
+          <img
+            src="https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/5449559e-6a9e-450a-a9b5-d006c9cd1338.jpg"
+            alt="ALAJE"
+            className="h-10 w-auto select-none"
+            style={{ filter: "brightness(1.1) drop-shadow(0 0 8px rgba(201,151,58,0.3))", mixBlendMode: "lighten" }}
+            draggable={false}
+          />
         </button>
         <div className="hidden md:flex items-center gap-7">
           {NAV_ITEMS.map(n => (
@@ -259,11 +265,16 @@ export default function Index() {
             <div className="absolute inset-0 opacity-[0.04]"
               style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201,151,58,0.8) 79px, rgba(201,151,58,0.8) 80px), repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,151,58,0.8) 79px, rgba(201,151,58,0.8) 80px)" }} />
             <div className="relative z-10 animate-fade-up px-6">
-              <p className="hero-subtitle mb-5" style={{ color: "var(--gold)" }}>Этническая роскошь · Африканские корни</p>
-              <h1 className="font-gothic text-7xl md:text-[10rem] tracking-widest leading-none mb-4"
-                style={{ color: "var(--gold)", textShadow: "0 0 100px rgba(201,151,58,0.25)" }}>
-                ALAJE
-              </h1>
+              <p className="hero-subtitle mb-8" style={{ color: "var(--gold)" }}>Этническая роскошь · Африканские корни</p>
+              <div className="flex justify-center mb-6">
+                <img
+                  src="https://cdn.poehali.dev/projects/227c56ad-d401-470a-a922-6b6712379247/bucket/5449559e-6a9e-450a-a9b5-d006c9cd1338.jpg"
+                  alt="ALAJE"
+                  className="w-64 md:w-96 select-none"
+                  style={{ filter: "brightness(1.05) drop-shadow(0 0 60px rgba(201,151,58,0.2))", mixBlendMode: "lighten" }}
+                  draggable={false}
+                />
+              </div>
               <p className="font-serif text-xl md:text-2xl italic opacity-60 mb-10 max-w-md mx-auto" style={{ letterSpacing: "0.04em" }}>
                 Каждый артефакт — история силы
               </p>
