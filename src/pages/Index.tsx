@@ -22,7 +22,7 @@ const S = {
 
 const ARTIFACTS = [
   { id: 1, name: "Туарегский Крест",  subtitle: "Кулон",             price: "8 900 ₽",  priceNum: 8900,  desc: "Серебро 925°, ручная чеканка. Символ защиты кочевников Сахары.", img: IMAGES.pendant,   rating: 4.8, reviews: 24, sizes: ["XS","S","M"],              material: "Серебро 925°" },
-  { id: 2, name: "Маска Предков",     subtitle: "Медальон-брелок",   price: "5 400 ₽",  priceNum: 5400,  desc: "Бронза, патинирование. Хранитель памяти и рода.",              img: IMAGES.medallion, rating: 4.9, reviews: 37, sizes: ["Один размер"],            material: "Бронза" },
+  { id: 2, name: "Защитный Медальон", subtitle: "Медальон-брелок",   price: "5 400 ₽",  priceNum: 5400,  desc: "Бронза, патинирование. Хранитель памяти и рода.",              img: IMAGES.medallion, rating: 4.9, reviews: 37, sizes: ["Один размер"],            material: "Бронза" },
   { id: 3, name: "Mani ire gbogbo",   subtitle: "Разомкнутое кольцо",price: "6 200 ₽",  priceNum: 6200,  desc: "Вороненая сталь. «Всё хорошее — мне» — йоруба.",              img: IMAGES.ring,      rating: 5.0, reviews: 18, sizes: ["16","17","18","19","20"],  material: "Вороненая сталь" },
 ];
 
